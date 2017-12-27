@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/flystyle.css"/>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>	
+		<script src="js/jquery.fly.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/requestAnimationFrame.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			
+    $(function() {
+        var offset = $("#end").offset();
+        $(".addTo").click(function(event){
+            var addcar = $(this);
+            var img = addcar.parents(".thumbnail").find('img').attr('src'); // 获取当前点击图片链接
+            var flyer = $('<img class="flyer" src="'+img+'">'); // 抛物体对象
+            flyer.fly({
+                start: {
+                    left: event.clientX, // 抛物体起点横坐标
+                    top: event.clientY // 抛物体起点纵坐标
+                },
+                end: {
+                    left: offset.left, // 抛物体终点横坐标
+                    top: offset.top, // 抛物体终点纵坐标
+                    width: 0, // 抛物体宽度
+                    height: 0 // 抛物体高度
+                },
+                onEnd: function(){
+                    $("#msg").show().animate({width: '250px'}, 200).fadeOut(1000); // 成功加入购物车动画效果
+                    addcar.css("cursor","default").unbind('click'); // 删除加入购物车按钮点击事件
+                    this.destory(); // 销毁抛物体
+                }
+            });
+        });
+    });
+		</script>
+	</head>
+	<body>
+		
+		
+		<div class="listnav">
+		<div class="navbar navbar-default list-center" id="nava">
+			<div class="container">
+				<div class="navbar-header">
+					<a id="nava" href="javascript:;" class="navbar-brand">全部商品分类<b class="tolink"></b></a>
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#mycollapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="mycollapse">
+					<ul class="nav navbar-nav navbar-left">					
+							<li class=""><a href="#"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+							<li><a href="#"> 生活用品</a></li>
+							<li><a href="#">24H百货</a></li>
+							<li><a href="#"> 全球购</a></li>
+							<li><a href="#"> 精品闪购</a></li>
+							
+							<li><a href="#">电器城</a></li>
+							<li><a href="#">奥莱代购</a></li>
+							<li><a href="#">礼品卡</a></li>
+					</ul>					
+				</div>
+			</div>
+		</div>	
+		</div>
+		
+		<!--goods-->
+		<div class="container">
+		<div class="row clearfix">
+		
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/SP_3030_303001538982_01_10006.jpg" />
+						<div class="caption">
+							<h3>￥498.00</h3>
+							<p class="product-comment">
+								<a href="javascript:;">迦麦佳沛（ZESPRI）阳光黄金奇异果 金果猕猴桃 大果整箱装（约27-33头/箱）新鲜水果</a>
+							</p>
+							<p class="rootIn">在<b>进口水果</b>中畅销</p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/288282661_200x200.jpg" />
+						<div class="caption">						
+							<h3>￥48.80</h3>
+							<p class="product-comment">
+								<a href="javascript:;">迦麦 秘鲁蓝莓2盒装 单盒125g 秘鲁进口</a>
+							</p>
+							<p class="rootIn">在<b>进口水果</b>中畅销</p>
+							<p>
+							<a class="btn-primary addTo" href="#">加入购物车</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/517971740_200x200.jpg" />
+						<div class="caption">
+							<h3>￥25.80
+							</h3>
+							<p class="product-comment">
+								<a href="javascript:;">迦麦佳沛（ZESPRI）阳光黄金奇异果 金果猕猴桃 大果整箱装（约27-33头/箱）新鲜水果</a>
+							</p>
+							<p class="proass"><b>24</b><i>92%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/SP_2000_20001090940001_01_10006.jpg" />
+						<div class="caption">
+							<h3>￥48.80
+							</h3> 
+							<p class="product-comment"><span class="goodname">联华天天 特级新奇士橙 4只装 1000g</span> 
+								<span class="rush">截单截单前48小时内达 截单后72小时内达</span>
+							</p>
+							<p class="rootIn">在<b>进口水果</b>中畅销</p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+					<img alt="200x200" src="img/SP_2000_20001090766001_01_10006.jpg" />
+						<div class="caption">
+							<h3>￥17.50
+							</h3>
+								<p class="product-comment"><span class="goodname">联华天天 特级龙眼 1斤装 新鲜水果</span> 
+								<span class="rush">截单截单前48小时内达 截单后72小时内达</span>
+							</p>
+							<p class="proass"><b>24</b><i>92%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+					<img alt="200x200" src="img/SP_2000_20001063387001_01_10006.jpg" />
+						<div class="caption">
+							<h3>￥89.00</h3>
+							<p class="product-comment">
+								<a href="javascript:;">御贤果园 新鲜水果 新奇士橙5斤装 单果约200g</a>
+							</p>
+							<p class="rootIn">在<b>进口水果</b>中畅销</p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/97521600_200x200.jpg" />
+						<div class="caption">
+							<h3>￥30.80</h3>
+							<p class="product-comment">
+								<a href="javascript:;">迦麦 新西兰金奇异果 单果约120g*3 新西兰进口</a>
+							</p>
+							<p class="rootIn">在<b>进口水果</b>中畅销</p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/658668024_200x200.jpg" />
+						<div class="caption">
+							<h3>￥13.90
+							</h3>
+							<p class="product-comment">
+								<a href="javascript:;">易果 美国黑提250g</a>
+								<span class="yishop">易果生鲜旗舰店</span>
+
+							</p>
+							<p class="rootIn">在<b>进口水果</b>中畅销</p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+					<img alt="200x200" src="img/988229689_200x200.jpg" />
+						<div class="caption">
+							<h3>￥208.00</h3>
+							<p class="product-comment">
+								<a href="javascript:;">易果 Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</a>
+							</p>
+							<p class="proass"><b>297</b><i>97%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/SP_2000_20001044036001_01_10006.jpg" />
+						<div class="caption">
+							<h3>
+								￥159.00
+							</h3>							
+							<p class="product-comment"><span class="goodname">御贤果园 车厘子 单果果径28mm-30mm JJ 1kg 进口 大樱桃 新鲜水果</span> 
+								<span class="rush">御贤果园 车厘子 单果果径28mm-30mm JJ 1kg 进口 大樱桃 新鲜水果此商品由供应商直接配送至您的家中，敬请等候......</span>
+							</p>
+							<p class="rootIn">在<b>进口水果</b>中畅销</p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/592700480_200x200.jpg" />
+						<div class="caption">
+							<h3>￥51.80
+							</h3> 
+							<p class="product-comment"><span class="goodname">易果 智利牛油果6个130-160g/个</span> 
+								<span class="rush">御贤果园 车厘子 单果果径28mm-30mm JJ 1kg 进口 大樱桃 新鲜水果此商品由供应商直接配送至您的家中，敬请等候......</span>
+							</p>
+							<p class="proass"><b>24</b><i>92%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/1058764532_200x200.jpg" />
+						<div class="caption">
+							<h3>￥51.80
+							</h3> 
+							<p class="product-comment"><a href="javascript:;">易果 泰国椰青4个</a>>
+							</p>
+							<p class="proass"><b>24</b><i>92%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				
+			
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+					<img alt="200x200" src="img/1425218845_200x200.jpg" />
+						<div class="caption">
+							<h3>￥88.00 <i class="navbar-right jian">满159减50</i> </h3>
+							<p class="product-comment"><span class="goodname">唯鲜良品 泰国龙眼5斤装</span> 
+								<span class="rushjian">满159减50</span>
+							</p>
+							<p class="proass"><b>1</b><i>90%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+					<img alt="200x200" src="img/552822156_200x200.jpg" />
+						<div class="caption">
+							<h3>￥41.00</h3>
+							<p>
+								迦麦 智利牛油果6个装 单果约130g 智利进口
+							</p>
+							<p class="proass"><b>24</b><i>92%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/370155056_200x200.jpg" />
+						<div class="caption"> 
+							<h3>￥62.00 <i class="navbar-right jian">满159减50</i> </h3>
+							<p class="product-comment"><span class="goodname">唯鲜良品 越南白心火龙果5斤装</span> 
+								<span class="rushjian">满159减50</span>
+							</p>
+							<p class="proass"><b>1</b><i>90%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/2075977798_200x200.jpg" />
+						<div class="caption">
+							<h3>￥48.80
+							</h3> 
+							<p class="product-comment"><a href="javascript:;">御贤果园 新西兰柠檬十只 1250g 单果约130g 新鲜进口水果</a>
+							</p>
+							<p class="proass"><b>1</b><i>90%</i></p>
+							<p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+					<img alt="200x200" src="img/SP_3030_303001518550_01_10006.jpg" />
+						<div class="caption">
+							<h3>
+								￥82.00
+							</h3>
+						<p class="product-comment">
+							<a href="javascript:;">迦麦佳沛（ZESPRI）阳光黄金奇异果 金果猕猴桃新鲜水果 大果 单果约80g</a>
+						</p>
+						<p class="proass"><b>378</b><i>96%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/2044860497_200x200.jpg" />
+						<div class="caption">
+							<h3>
+								￥69.90
+							</h3>						
+						<p class="product-comment">
+							<a href="javascript:;">御贤果园 南非西柚8只 3500g 单果约420g 新鲜进口水果</a>
+						</p>
+						<p class="proass"><b>378</b><i>96%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/1719310492_200x200.jpg" />
+						<div class="caption">
+							<h3>￥45.90</h3> 
+							<p class="product-comment">
+							<a href="javascript:;">易果 智利嘎啦果12个115g以上/个</a>
+						</p>
+						<p class="proass"><b>378</b><i>96%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<div class="thumbnail">
+						<img alt="200x200" src="img/SP_3030_303001533125_01_10006.jpg" />
+						<div class="caption">
+							<h3>￥47.00
+							</h3>
+							<p class="product-comment">
+							<a href="javascript:;">迦麦 进口柠檬 黄柠檬新鲜水果 6只/装</a>
+						</p>
+						<p class="proass"><b>378</b><i>96%</i></p>
+							<p>
+								<a class="btn-primary addTo" href="#">加入购物车</a>
+							</p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+		
+<!--分页-->
+		<div class="container">
+			<nav aria-label="Page navigation">
+			  <ul class="pagination  pull-right">
+			    <li>
+			      <a href="#" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+			    <li><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li>
+			      <a href="#" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>	
+<!--右侧栏-->
+		<div class="rightSider">
+			<div class="rsideIn">
+				<div class="noRsiderIn">
+					<div class="user eqcss"><i></i></div>
+					<div class="sidecss sidebar">
+						<div class="shopcar cart"><i id="end"></i><span>购物车</span><b>0</b></div>
+					</div>
+					 <div id="msg">已成功加入购物车！</div>
+					<div class="mbar-tab eqcss"><i></i></div>
+					<div class="history-tab eqcss"><i></i></div>
+					<div class="weixin-tab eqcss"><i></i></div>
+					<div class="service-tab eqcss"><i></i></div>
+					<div class="totop-tab eqcss"><i></i></div>					
+				</div>					
+			</div>
+		</div>
+
+	</body>
+</html>

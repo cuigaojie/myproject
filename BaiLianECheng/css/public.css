@@ -1,0 +1,193 @@
+h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif; color:#333;
+margin: 0;
+padding: 0; }
+table{border-collapse:collapse;border-spacing:0;}
+body{
+	min-width: 1190px;	
+}
+body, select, textarea,button{
+    font: 12px/150% "microsoft yahei","Hiragino Sans GB",SimSun,tahoma,sans-serif;
+    background: #f9f9f8;
+    outline: 0;
+    border:none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+a{
+	text-decoration: none;
+	color: #666;
+}
+a:hover{
+	text-decoration: underline;
+}
+.clear{
+	clear: both;
+}
+ul li,ol li{
+	list-style: none;
+	float: left;
+}
+b,strong{
+	font-weight: normal;
+}
+em,i{
+	font-style: normal;
+}
+img{
+	border:none;
+	outline: none;
+}
+.bd{
+	display: block;
+}
+.floor-bor{
+	border-top: 2px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+}
+
+.floor-bor-right{
+	border-right: 1px solid #e4e4e4;
+	
+}
+/*=================底部=============*/
+.base{
+	width:100%;
+	background:#f3f3f3 ;
+	text-align: center;
+	min-width: 1190px;	
+	padding-top: 30px;
+}
+.base-footer{
+	width:1100px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.help-list{
+	width:200px;
+	float: left;
+	width: 200px;
+	margin: 0 10px;
+}
+.help-list li{
+	float: none;
+	text-align: left;
+}
+.help-tit{
+	height: 40px;
+	line-height: 40px;
+	color: #000;
+	font-size: 16px;
+	text-align: left;
+}
+.help-tit i{
+	width:40px;
+	height: 40px;
+	display: inline-block;
+	margin-right: 15px;
+	float: left;
+}
+.help-tit .footic1{
+	background: url(../img/footer1200_sprite.png) 0 0 no-repeat;
+}
+.help-tit .footic2{
+	background: url(../img/footer1200_sprite.png) 0 -40px no-repeat;
+}
+.help-tit .footic3{
+	background: url(../img/footer1200_sprite.png) 0 -80px no-repeat;
+}
+.help-tit .footic4{
+	background: url(../img/footer1200_sprite.png) 0 -120px no-repeat;
+}
+.help-tit .footic5{
+	background: url(../img/footer1200_sprite.png) 0 -160px no-repeat;
+}
+.help-list ul{
+	margin-left: 55px;
+	font-size: 13px;
+	line-height: 26px;
+	color: #555;
+}
+.help-list ul a:hover{
+	color:#E6133C;
+}
+.serial{
+	color:#666;
+}
+.center .link,.center .contact{
+	line-height: 1;
+}
+.police{
+	padding: 10px 0 20px;
+}
+.police a{
+	display: inline-block;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	margin-right: 10px;
+	color: #666;
+}
+.police a img{
+	width:20px;
+	height: 21px;
+	margin-right: 5px;
+	
+	
+}
+.police a span{
+	padding: 0 5px;
+}
+
+.footer{
+	width:100%;
+	background: #fff;
+	margin: 0 auto;
+	text-align: center;
+	padding-top:20px;
+	color:#999;
+	overflow: hidden;
+	min-width: 1190px;
+	
+	
+}
+.footer a{
+	color:#003333;
+}
+.footer .link{
+	margin: 10px auto 5px;
+}
+.footer b{
+	padding: 0 10px;
+}
+.footer .contact{
+	margin: 10px auto;
+}
+.scroll-top{
+	display: none;
+}
+
+.wid100{
+	width:100%;
+	background: #fff;
+	overflow: hidden;
+}
+.warp{
+	width:1190px;
+	margin: 0 auto;
+	color: #8d8d8d;	
+	overflow: hidden;
+	text-align: center;
+}
+.warp-tit{
+	width: 1190px;
+	height: 30px;
+	margin: 0 auto;
+}
